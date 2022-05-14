@@ -13,7 +13,7 @@ Verbosity:
     
 - No PTR: No entry found in Inverse DNS for this address (No PTR found)
 - Valid PTR: IP address is associated with a domain name (PTR exists) and the domain name points back to the same IP address
-- Unvalid PTR: IP address is associated with a domain name (PTR exists), however the domain name does not back to the same IP address...
+- Unvalid PTR: IP address is associated with a domain name (PTR exists), however the domain name does not point back to the same IP address...
 - Unverified PTR: IP address is associated with a domain name (PTR exists), but domain name is not associated with any IP address (No 'A' field found in DNS for this domain name)
       
            
