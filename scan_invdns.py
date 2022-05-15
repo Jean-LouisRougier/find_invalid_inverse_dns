@@ -2,6 +2,17 @@
 import sys
 from netaddr import IPNetwork
 from dns import resolver,reversename
+import subprocess, platform
+
+def pingOk(sHost):
+    try:
+        output = subprocess.check_output("ping -{} 1 -W0.5 {}".format('n' if platform.system().lower()=="windows" else 'c', sHost), shell=True)
+
+    except :
+        return False
+
+    return True
+
 
 
 if (len(sys.argv)<2): 
@@ -20,6 +31,7 @@ valid_ptr=0
 unvalid_ptr=0
 unverified_ptr=0
 total=0
+unused=0
 for ip in IPNetwork(str(sys.argv[1])): 
     #print(ip)
     total+=1
