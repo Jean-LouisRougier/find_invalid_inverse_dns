@@ -41,7 +41,7 @@ for ip in IPNetwork(str(sys.argv[1])):
         ans=resolver.resolve(addr,"PTR")
         try: 
             verif_ip=resolver.resolve(str(ans[0]), "A")
-            print("       DNS_A:",str(verif_ip[0]), "/", str(ip))
+            #print("       DNS_A:",str(verif_ip[0]), "/", str(ip))
             if (str(verif_ip[0])==str(ip)):
                 valid_ptr+=1
                 #status+="/Valid_PTR"
